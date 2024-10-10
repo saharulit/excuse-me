@@ -1,4 +1,19 @@
-<div class="flex flex-col items-center justify-center h-screen bg-gray-100">
-  <h1 class="text-4xl font-bold text-blue-600">Excuse Me!</h1>
-  <p class="mt-4 text-gray-600">Your go-to app for crafting the perfect excuse.</p>
-</div>
+<script lang="ts">
+  import { Router, Route, Link } from "svelte-routing";
+  import {Edit, List} from "./routes/excuse";
+  
+  // let basePath = '/excuses';
+</script>
+
+<Router basepath="excuses">
+  <Route path="/">
+    <List />
+  </Route>
+  <Route path="/create">
+    <Edit />
+  </Route>
+  <Route path="/edit/:id" let:params>
+    <Edit id={params.id} />
+  </Route>
+</Router>
+
