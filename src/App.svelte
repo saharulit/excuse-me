@@ -1,7 +1,11 @@
 <script lang="ts">
-  import { Router, Route, Link } from "svelte-routing";
-  import {Edit, List} from "./routes/excuse";
-  
+  import { onMount } from 'svelte';
+  import { Router, Route, navigate } from "svelte-routing";
+  import { Edit, List } from "./routes/excuse";
+
+  onMount(() => {
+    navigate('/excuses', { replace: true });
+  });
 </script>
 
 <Router basepath="excuses">
@@ -15,4 +19,3 @@
     <Edit id={params.id} />
   </Route>
 </Router>
-
