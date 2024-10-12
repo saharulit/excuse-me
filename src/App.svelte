@@ -2,7 +2,6 @@
   import { Router, Route, Link } from "svelte-routing";
   import {Edit, List} from "./routes/excuse";
   
-  // let basePath = '/excuses';
 </script>
 
 <Router basepath="excuses">
