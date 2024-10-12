@@ -12,7 +12,6 @@
 - **Frontend**: Svelte with TypeScript
 - **Styling**: Tailwind CSS
 - **Storage**: Local Storage for saving excuses
-- **Testing**: Playwright for end-to-end testing
 
 ## Installation
 
