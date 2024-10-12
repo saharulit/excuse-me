@@ -5,7 +5,7 @@
   import GroupButtons from '../../components/GroupButtons.svelte';
   import { Category } from '../../entities/excuse';
 
-  let selectedCategory: Category
+  let selectedCategory: Category | null = null
   $:filteredExcuses = selectedCategory ? $excusesStore.filter(excuse => excuse.category === selectedCategory) : $excusesStore
 
   const editExcuse = (id: string) => {
@@ -17,7 +17,11 @@
   };
 
   const toggleCategory = (value: Category) => {
-    selectedCategory = value
+    if(selectedCategory === value){
+      selectedCategory = null
+    } else {
+      selectedCategory = value
+    }
   }
 </script>
 

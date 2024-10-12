@@ -2,7 +2,7 @@
   import Form from "./Form.svelte";
   import { excusesStore } from "../../stores/excusesStore";
 
-  export let id: string | undefined = undefined
+  export let id: string | null = null
   $: excuse = $excusesStore.find(item => item.id === id)
 </script>
 

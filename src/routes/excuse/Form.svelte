@@ -7,7 +7,7 @@
   import { addExcuse, updateExcuse } from '../../stores/excusesStore';
   import { navigate } from 'svelte-routing';
 
-  export let excuse: Excuse | undefined
+  export let excuse: Excuse | null
 
   const schema = zod.object({
     text: zod.string().min(1, { message: "Text is required." }),
